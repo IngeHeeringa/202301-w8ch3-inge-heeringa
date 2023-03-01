@@ -18,6 +18,9 @@ const clientSlice = createSlice({
       ...action.payload,
       isLogged: true,
     }),
+    logoutClient: (currentClientState, action) => ({
+      ...initialClientState,
+    }),
   },
 });
 
