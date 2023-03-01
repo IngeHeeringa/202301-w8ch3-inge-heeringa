@@ -5,6 +5,9 @@ export interface Client {
   shoppingCart: Painting[];
   orders: OrderStatus[];
 }
+
+export type ClientLogin = Pick<Client, "email" | "token" | "isLogged">;
+
 export interface Painting {
   name: string;
   artist: string;

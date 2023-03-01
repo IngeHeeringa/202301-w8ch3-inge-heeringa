@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Client } from "../../types";
+import { Client, ClientLogin } from "../../types";
 
 const initialClientState: Client = {
   email: "",
@@ -13,7 +13,7 @@ const clientSlice = createSlice({
   name: "client",
   initialState: initialClientState,
   reducers: {
-    loginClient: (currentClientState, action: PayloadAction<Client>) => ({
+    loginClient: (currentClientState, action: PayloadAction<ClientLogin>) => ({
       ...currentClientState,
       ...action.payload,
       isLogged: true,
