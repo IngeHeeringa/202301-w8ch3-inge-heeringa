@@ -18,11 +18,14 @@ const clientSlice = createSlice({
       ...action.payload,
       isLogged: true,
     }),
-    logoutClient: (currentClientState, action) => ({
+    logoutClient: (currentClientState) => ({
       ...initialClientState,
     }),
   },
 });
 
 export const clientReducer = clientSlice.reducer;
-export const { loginClient: loginClientActionCreator } = clientSlice.actions;
+export const {
+  loginClient: loginClientActionCreator,
+  logoutClient: logoutClientActionCreator,
+} = clientSlice.actions;
