@@ -1,11 +1,10 @@
 export interface Client {
-  username: string;
   email: string;
+  token: string;
   isLogged: boolean;
   shoppingCart: Painting[];
   orders: OrderStatus[];
 }
-
 export interface Painting {
   name: string;
   artist: string;
