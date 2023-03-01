@@ -1,10 +1,12 @@
 export interface Client {
-  username: string;
   email: string;
+  token: string;
   isLogged: boolean;
   shoppingCart: Painting[];
   orders: OrderStatus[];
 }
+
+export type ClientLogin = Pick<Client, "email" | "token" | "isLogged">;
 
 export interface Painting {
   name: string;

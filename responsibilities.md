@@ -5,6 +5,7 @@
 ### Client
 
 - username: string
+- token: string
 - email: string
 - isLogged: boolean
 - shoppingCart: Paintings[]
